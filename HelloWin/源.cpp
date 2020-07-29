@@ -58,6 +58,7 @@ LRESULT	CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_CREATE:
 		/* PlaySound只能播放wav格式的音频 */
 		PlaySound(TEXT("9049.wav"), NULL, SND_FILENAME | SND_ASYNC);
+		MessageBox(hwnd, TEXT("点击进入主界面"), TEXT("提示"), 0);
 		return 0;
 	case WM_PAINT:
 		hdc = BeginPaint(hwnd, &ps);
